@@ -1,5 +1,5 @@
 import './App.css';
-import About from './components/About';
+
 import React, { useState } from 'react';
 
 
@@ -7,13 +7,15 @@ import Navbar from './components/Navbar';
 
 import Alert from './components/Alert';
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
   
-} from "react-router-dom";
+  
+// } from "react-router-dom";
 import Textform from './components/Textform';
+
 
 
 
@@ -75,23 +77,33 @@ setTimeout(() => {
 }
   return (
     <>
- <Router>
+    <Navbar title="TextUtils" about="About Us" mode={mode} red={red} blue={blue} success={success} yellow={yellow} togglemode={togglemode} />
+    <Textform/>
+    <Alert alert={alert} />
+ {/* <Router>
 <Navbar title="TextUtils" about="About Us" mode={mode} red={red} blue={blue} success={success} yellow={yellow} togglemode={togglemode} />
 <Alert alert={alert} />
 <div className="container">
 <Routes>
-          <Route path="/about" element={
-            <About mode={mode}/>}>
+
+<Route exact path="/AyushiChaudhary1206/TextUtils" element={
+          <Textutils />}>
+           
+          </Route>
+          <Route exact path="/" element={
+          <Textutils />}>
+           
           </Route>
          
-          <Route path="/" element={
+         
+          <Route path="/home" element={
           <Textform mode={mode} setAlert={setalert}/>}>
            
           </Route>
         </Routes>
         </div>
 </Router>
-
+ */}
 
 </>
   );
